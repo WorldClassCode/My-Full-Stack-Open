@@ -1,0 +1,19 @@
+title Exercise 0.6: New note
+
+note over browser:
+Submit button is clicked, 
+default action is prevented, 
+instead the data is redrawn to 
+Notes in the client.
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+New note is pushed onto the notes array
+end note
+server-->browser: Status code: 201 Created
+
+note over browser:
+The client knows the data on the server was created.
+Client is already updated, before the call to the server.
+end note
